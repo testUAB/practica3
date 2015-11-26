@@ -1,0 +1,9 @@
+base:
+	pkgrepo.managed:
+		- gpgkey: http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key
+		- name: deb http://ossec.wazuh.com/repos/apt/debian wheezy main
+		- dist: wheezy
+		- file: /etc/apt/sources.list.d/ossec.list
+	pkg.latest:
+		- refresh: True
+
